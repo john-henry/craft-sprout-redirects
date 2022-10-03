@@ -29,16 +29,6 @@
         "barrelstrength/sprout-base": "dev-craft-4",
         "barrelstrength/sprout-base-redirects": "dev-craft-4"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/john-henry/craft-sprout-base-redirects"
-        },
-        {
-          "type": "vcs",
-          "url": "https://github.com/john-henry/craft-sprout-base"
-        }
-      ],
     "autoload": {
         "psr-4": {
             "barrelstrength\\sproutredirects\\": "src/"
