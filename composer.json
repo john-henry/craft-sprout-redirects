@@ -1,7 +1,7 @@
 {
     "name": "barrelstrength/sprout-redirects",
     "description": "User-friendly Redirect Manager with 404 logging and Multi-Site support",
-    "version": "1.5.3",
+    "version": "4.0.0",
     "type": "craft-plugin",
     "keywords": [
         "craft",
@@ -25,7 +25,7 @@
         "rss": "https://github.com/barrelstrength/craft-sprout-redirects/commits/v2.atom"
     },
     "require": {
-        "craftcms/cms": "^3.4.0",
+        "craftcms/commerce": "^4.0.0",
         "barrelstrength/sprout-base": "^6.0.0",
         "barrelstrength/sprout-base-redirects": "^1.5.4"
     },
@@ -41,5 +41,23 @@
         "developerUrl": "https://barrelstrengthdesign.com",
         "documentationUrl": "https://sprout.barrelstrengthdesign.com/docs/redirects",
         "class": "barrelstrength\\sproutredirects\\SproutRedirects"
-    }
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main",
+        "craftcms/phpstan": "dev-main",
+        "craftcms/rector": "dev-main"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    },
+    "scripts": {
+        "fix-cs": "ecs check --ansi --fix",
+        "check-cs": "ecs check --ansi",
+        "phpstan": "phpstan --memory-limit=1G"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }

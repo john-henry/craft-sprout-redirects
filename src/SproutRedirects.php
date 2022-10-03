@@ -48,17 +48,17 @@ class SproutRedirects extends Plugin implements SproutDependencyInterface
     /**
      * @var bool
      */
-    public $hasCpSection = true;
+    public bool $hasCpSection = true;
 
     /**
      * @var bool
      */
-    public $hasCpSettings = true;
+    public bool $hasCpSettings = true;
 
     /**
      * @var string
      */
-    public $schemaVersion = '1.3.2';
+    public string $schemaVersion = '1.3.2';
 
     /**
      * @inheritdoc
@@ -97,7 +97,7 @@ class SproutRedirects extends Plugin implements SproutDependencyInterface
         });
     }
 
-    public function getCpNavItem()
+    public function getCpNavItem(): ?array
     {
         $parent = parent::getCpNavItem();
 
@@ -151,7 +151,7 @@ class SproutRedirects extends Plugin implements SproutDependencyInterface
      *
      * @return \craft\web\Response|mixed|\yii\console\Response|Response
      */
-    public function getSettingsResponse()
+    public function getSettingsResponse(): mixed
     {
         $url = UrlHelper::cpUrl('sprout-redirects/settings');
 
@@ -186,7 +186,7 @@ class SproutRedirects extends Plugin implements SproutDependencyInterface
     /**
      * @return SproutBaseRedirectsSettings
      */
-    protected function createSettingsModel(): SproutBaseRedirectsSettings
+    protected function createSettingsModel(): ?\craft\base\Model
     {
         return new SproutBaseRedirectsSettings();
     }
