@@ -26,9 +26,19 @@
     },
     "require": {
         "craftcms/commerce": "^4.0.0",
-        "barrelstrength/sprout-base": "^7.0.0",
-        "barrelstrength/sprout-base-redirects": "^4.0.0"
+        "barrelstrength/sprout-base": "dev-v7",
+        "barrelstrength/sprout-base-redirects": "dev-craft-4"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/john-henry/craft-sprout-base-redirects"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/john-henry/craft-sprout-base"
+        }
+      ],
     "autoload": {
         "psr-4": {
             "barrelstrength\\sproutredirects\\": "src/"
